@@ -28,7 +28,7 @@ namespace lab_6
 				
 				if (option == 1)
 				{
-					//FunckForLocation();
+					FunckForLocation();
 				}
 				else if (option == 2)
 				{
@@ -44,18 +44,17 @@ namespace lab_6
 				}
 			} while (option != 5);
 
-			/*void FunckForLocation()
+			void FunckForLocation()
 			{
 
-				int distanceSchool, distanceHospital, distanceKindergarten, numHouse;
+				int distanceSchool, distanceHospital, distanceKindergarten, numHouse, option;
 				string houseStreet;
-				int option = 0;
 
-				location location_1 = new location();
+				Location location_1 = new Location();
 
 				do
 				{
-					Console.WriteLine("  1) Заполнить через встроенную функцию\n  2) Заполнить через внешнюю функцию\n  3) Вывести информацию со структуры\n  4) Выход в главное меню\n");
+					Console.WriteLine("  1) Заполнить через встроенную функцию\n  2) Заполнить через внешнюю функцию\n  3) Вывести информацию об обьекте\n  4) Выход в главное меню\n");
 					Console.WriteLine("Выберите действие: ");
 					do
 					{
@@ -96,17 +95,16 @@ namespace lab_6
 				} while (option != 4);
 
 			}
-			*/
+			
 			void FunckForFlat()
 			{
-				int coin, countRoom, numFlat;
-				int option = 0;
+				int coin, countRoom, numFlat, option;
 
 				Flat flat_1 = new Flat();
 
 				do
 				{
-					Console.WriteLine("  1) Заполнить через встроенную функцию\n  2) Заполнить через внешнюю функцию\n  3) Вывести информацию со структуры\n  4) Выход в главное меню\n");
+					Console.WriteLine("  1) Заполнить через встроенную функцию\n  2) Заполнить через внешнюю функцию\n  3) Вывести информацию об обьекте\n  4) Выход в главное меню\n");
 					Console.WriteLine("Выберите действие: ");
 					do
 					{
@@ -153,7 +151,7 @@ namespace lab_6
 				int option = 0;
 				do
 				{
-					Console.WriteLine("  1) Заполнить через встроенную функцию\n  2) Заполнить через внешнюю функцию\n  3) Вывести информацию со структуры\n  4) Выход в главное меню\n");
+					Console.WriteLine("  1) Заполнить через встроенную функцию\n  2) Заполнить через внешнюю функцию\n  3) Вывести информацию об обьекте\n  4) Выход в главное меню\n");
 					Console.WriteLine("Выберите действие: ");
 					do
 					{
@@ -196,7 +194,7 @@ namespace lab_6
 				int option = 0;
 				do
 				{
-					Console.WriteLine("  1) Заполнить через встроенную функцию\n  2) Заполнить через внешнюю функцию\n  3) Вывести информацию со структуры\n  4) Выход в главное меню\n");
+					Console.WriteLine("  1) Заполнить через встроенную функцию\n  2) Заполнить через внешнюю функцию\n  3) Вывести информацию об обьекте\n  4) Выход в главное меню\n");
 					Console.WriteLine("Выберите действие: ");
 					do
 					{
