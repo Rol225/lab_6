@@ -7,11 +7,7 @@ namespace lab_6
     {
         static void Main(string[] args)
         {
-			//Подключение Русского языка
-			//SetConsoleCP(1251);
-			//SetConsoleOutputCP(1251);
-
-			int option = 0;
+			int option;
 
 			do
 			{
@@ -40,7 +36,7 @@ namespace lab_6
 				}
 				else if (option == 4)
 				{
-					//FunckForHouse();
+					FunckForHouse();
 				}
 			} while (option != 5);
 
@@ -183,13 +179,13 @@ namespace lab_6
 				} while (option != 4);
 
 			}
-			/*
+			
 			void FunckForHouse()
 			{
 				int distanceSchool, distanceHospital, distanceKindergarten, numHouse, coin, countRoom, numFlat;
 				string streetDescription, houseStreet;
 
-				house house_1 = new house();
+				House house_1 = new House();
 
 				int option = 0;
 				do
@@ -246,7 +242,7 @@ namespace lab_6
 				} while (option != 4);
 
 			}
-			*/
+			
 		}	
 	}
 }
