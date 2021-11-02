@@ -36,7 +36,7 @@ namespace lab_6
 				}
 				else if (option == 3)
 				{
-					//FunckForStreet();
+					FunckForStreet();
 				}
 				else if (option == 4)
 				{
@@ -140,13 +140,13 @@ namespace lab_6
 				} while (option != 4);
 
 			}
-			/*
+			
 			void FunckForStreet()
 			{
 				string streetName;
 				string streetDescription;
 
-				street street_1 = new street();
+				Street street_1 = new Street();
 
 				int option = 0;
 				do
@@ -183,7 +183,7 @@ namespace lab_6
 				} while (option != 4);
 
 			}
-
+			/*
 			void FunckForHouse()
 			{
 				int distanceSchool, distanceHospital, distanceKindergarten, numHouse, coin, countRoom, numFlat;
