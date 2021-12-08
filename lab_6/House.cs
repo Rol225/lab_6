@@ -12,9 +12,9 @@ namespace lab_6
 
         public void Set(int distanceSchool, int distanceHospital, int distanceKindergarten, string houseStreet, int numHouse, int coin, int countRoom, int numFlat, string streetDescription) 
         {
-            location.Set(distanceSchool, distanceHospital, distanceKindergarten, houseStreet, numHouse);
-            flat.Set(coin, countRoom, numFlat);
-            street.Set(houseStreet, streetDescription);
+            this.location.Set(distanceSchool, distanceHospital, distanceKindergarten, houseStreet, numHouse);
+            this.flat.Set(coin, countRoom, numFlat);
+            this.street.Set(houseStreet, streetDescription);
         } // Функция ввода через встроенную функцию
         public void Set_console()
         {

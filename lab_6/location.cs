@@ -16,43 +16,43 @@ namespace lab_6
 		{
 			if (distanceSchool_2 <= 0)
 			{
-				distanceSchool = 0;
+				this.distanceSchool = 0;
 			}
 			else
 			{
-				distanceSchool = distanceSchool_2;
+				this.distanceSchool = distanceSchool_2;
 			}
 			if (distanceHospital_2 <= 0)
 			{
-				distanceHospital = 0;
+				this.distanceHospital = 0;
 			}
 			else
 			{
-				distanceHospital = distanceHospital_2;
+				this.distanceHospital = distanceHospital_2;
 			}
 			if (distanceKindergarten_2 <= 0)
 			{
-				distanceKindergarten = 0;
+				this.distanceKindergarten = 0;
 			}
 			else
 			{
-				distanceKindergarten = distanceKindergarten_2;
+				this.distanceKindergarten = distanceKindergarten_2;
 			}
 			if (numHouse_2 <= 0)
 			{
-				numHouse = 0;
+				this.numHouse = 0;
 			}
 			else
 			{
-				numHouse = numHouse_2;
+				this.numHouse = numHouse_2;
 			}
 			if (houseStreet_2 != null)
 			{
-				houseStreet = houseStreet_2;
+				this.houseStreet = houseStreet_2;
 			}
 			else
 			{
-				houseStreet = "Error";
+				this.houseStreet = "Error";
 			}
 		}//Функция ввода через внешнюю функцию
 		public void Set_console()

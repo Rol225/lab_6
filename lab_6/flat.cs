@@ -13,27 +13,27 @@ namespace lab_6
 		public void Set(int coin_2, int countRoom_2, int numFlat_2) {
 			if (coin_2 <= 0)
 			{
-				coin = 0;
+				this.coin = 0;
 			}
 			else
 			{
-				coin = coin_2;
+				this.coin = coin_2;
 			}
 			if (countRoom_2 <= 0)
 			{
-				countRoom = 0;
+				this.countRoom = 0;
 			}
 			else
 			{
-				countRoom = countRoom_2;
+				this.countRoom = countRoom_2;
 			}
 			if (numFlat_2 <= 0)
 			{
-				numFlat = 0;
+				this.numFlat = 0;
 			}
 			else
 			{
-				numFlat = numFlat_2;
+				this.numFlat = numFlat_2;
 			}
 		} // Функция ввода через внешнюю функцию
 		public void Set_console() {

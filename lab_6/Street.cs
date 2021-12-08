@@ -13,27 +13,27 @@ namespace lab_6
 		{
 			if (streetName_2 != null)
 			{
-				streetName = streetName_2;
+				this.streetName = streetName_2;
 			}
 			else
 			{
-				streetName = "Error";
+				this.streetName = "Error";
 			}
 			if (streetName_2 != null)
 			{
-				streetDescription = streetDescription_2;
+				this.streetDescription = streetDescription_2;
 			}
 			else
 			{
-				streetDescription = "Error";
+				this.streetDescription = "Error";
 			}
 		}// Функция ввода через встроенную функцию
 		public void Set_console() 
 		{
 			Console.WriteLine("\nУлица: ");
-			streetName = Console.ReadLine();
+			this.streetName = Console.ReadLine();
 			Console.WriteLine("Описание улици: ");
-			streetDescription = Console.ReadLine();
+			this.streetDescription = Console.ReadLine();
 		} // Функция ввода через внешнюю функцию
 		public void Print() 
 		{
