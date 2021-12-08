@@ -21,29 +21,29 @@ namespace lab_6
             int distanceSchool, distanceHospital, distanceKindergarten, numHouse, coin, countRoom, numFlat;
             string streetDescription, houseStreet;
 
-            Console.WriteLine("Выберите расстояние до школы: ");
+            Console.Write("\nВыберите расстояние до школы: ");
             while (!int.TryParse(Console.ReadLine(), out distanceSchool)) { Console.WriteLine("Ошибка. Введите число: "); }
 
-            Console.WriteLine("Выберите расстояние до больницы: ");
+            Console.Write("\nВыберите расстояние до больницы: ");
             while (!int.TryParse(Console.ReadLine(), out distanceHospital)) { Console.WriteLine("Ошибка. Введите число: "); }
 
-            Console.WriteLine("Выберите расстояние до детского сада: ");
+            Console.Write("\nВыберите расстояние до детского сада: ");
             while (!int.TryParse(Console.ReadLine(), out distanceKindergarten)) { Console.WriteLine("Ошибка. Введите число: "); }
 
-            Console.WriteLine("Выберите стоимость квартиры: ");
+            Console.Write("\nВыберите стоимость квартиры: ");
             while (!int.TryParse(Console.ReadLine(), out coin)) { Console.WriteLine("Ошибка. Введите число: "); }
 
-            Console.WriteLine("Выберите кол-во комнат: ");
+            Console.Write("\nВыберите кол-во комнат: ");
             while (!int.TryParse(Console.ReadLine(), out countRoom)) { Console.WriteLine("Ошибка. Введите число: "); }
 
-            Console.WriteLine("Номер дома: ");
+            Console.Write("\nНомер дома: ");
             while (!int.TryParse(Console.ReadLine(), out numHouse)) { Console.WriteLine("Ошибка. Введите число: "); }
 
-            Console.WriteLine("Номер квартиры: ");
+            Console.Write("\nНомер квартиры: ");
             while (!int.TryParse(Console.ReadLine(), out numFlat)) { Console.WriteLine("Ошибка. Введите число: "); }
 
-            Console.WriteLine("\nУлица: "); houseStreet = Console.ReadLine();
-            Console.WriteLine("Описание улици: "); streetDescription = Console.ReadLine();
+            Console.Write("\n\nУлица: "); houseStreet = Console.ReadLine();
+            Console.Write("\nОписание улици: "); streetDescription = Console.ReadLine();
 
             location.Set(distanceSchool, distanceHospital, distanceKindergarten, houseStreet, numHouse);
             flat.Set(coin, countRoom, numFlat);
@@ -51,11 +51,19 @@ namespace lab_6
         } // Функция ввода через внешнюю функцию
         public void Print() 
         {
-            Console.Write("\n  Адрес: {0}, дом {1}\n", location.House_street, location.Num_house);
+            int distanceSchool;
+            int distanceHospital;
+            int distanceKindergarten;
+            string houseStreet = "";
+            int numHouse = 0;
+            location.OutData(out distanceSchool, out distanceHospital, out distanceKindergarten);
+            location.RefData(ref houseStreet, ref numHouse);
+
+            Console.Write("\n  Адрес: {0}, дом {1}\n", houseStreet, numHouse);
             Console.Write("  Номер квартиры: {0}\n", flat.Num_flat);
-            Console.Write("  Расстояние до школы: {0} км\n", location.Distance_school);
-            Console.Write("  Расстояние до больницы: {0} км\n", location.Distance_hospital);
-            Console.Write("  Расстояние до детского сада: {0} км\n", location.Distance_kindergarten);
+            Console.Write("  Расстояние до школы: {0} км\n", distanceSchool);
+            Console.Write("  Расстояние до больницы: {0} км\n", distanceHospital);
+            Console.Write("  Расстояние до детского сада: {0} км\n", distanceKindergarten);
             Console.Write("  Кол-во комнат: {0}\n", flat.Count_room);
             Console.Write("  Цена: {0} рублей\n", flat.Coin);
             Console.Write("  Информация о улице: {0}\n\n", street.Street_description);

@@ -113,5 +113,16 @@ namespace lab_6
 			get => houseStreet;
 			set => houseStreet = value;
 		}
+		public void OutData(out int distanceSchool, out int distanceHospital, out int distanceKindergarten)
+		{
+			distanceSchool = this.distanceSchool;
+			distanceHospital = this.distanceHospital;
+			distanceKindergarten = this.distanceKindergarten;
+		}
+		public void RefData(ref string houseStreet, ref int numHouse)
+		{
+			houseStreet = this.houseStreet;
+			numHouse = this.numHouse;
+		}
 	}
 }

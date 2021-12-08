@@ -266,8 +266,6 @@ namespace lab_6
 				}
 				Console.WriteLine();
 			}
-
-
 		}	
 	}
 }
