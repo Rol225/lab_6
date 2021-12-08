@@ -11,7 +11,7 @@ namespace lab_6
 
 			do
 			{
-				 Console.WriteLine("  1) Структура location\n  2) Структура flat\n  3) Структура street\n  4) Структура house\n  5) Выход\n");
+				 Console.WriteLine("  1) Класс location\n  2) Класс flat\n  3) Класс street\n  4) Класс house\n  5) Массив обьектов класса house\n  6) Выход\n");
 				 Console.WriteLine("Выберите действие: ");
 				do
 				{
@@ -38,7 +38,11 @@ namespace lab_6
 				{
 					FunckForHouse();
 				}
-			} while (option != 5);
+				else if (option == 5)
+				{
+					FunckForHouses();
+				}
+			} while (option != 6);
 
 			void FunckForLocation()
 			{
@@ -242,7 +246,28 @@ namespace lab_6
 				} while (option != 4);
 
 			}
-			
+
+			void FunckForHouses()
+            {
+				int size;
+				Console.WriteLine("  Сколько домов вы хотите создать: ");
+				while (!int.TryParse(Console.ReadLine(), out size)) { Console.WriteLine("Ошибка. Введите число: "); }
+				House[] list = new House[size];
+				for(int i = 0; i < size; i++)
+                {
+					list[i] = new House();
+					list[i].Set_console();
+                }
+				Console.WriteLine("  Введённые вами данные: ");
+				for(int i = 0; i < size; i++)
+                {
+					list[i].Print();
+					Console.WriteLine();
+				}
+				Console.WriteLine();
+			}
+
+
 		}	
 	}
 }
