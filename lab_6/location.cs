@@ -4,7 +4,7 @@ using System.Text;
 
 namespace lab_6
 {
-    class Location
+	struct Location
     {
 		private int distanceSchool; //Расстояние до школы
 		private int distanceHospital;//Расстояние до больници

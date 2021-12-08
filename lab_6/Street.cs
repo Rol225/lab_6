@@ -4,7 +4,7 @@ using System.Text;
 
 namespace lab_6
 {
-    class Street
+	struct Street
     {
 		private string streetName;
 		private string streetDescription;

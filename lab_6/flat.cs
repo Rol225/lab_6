@@ -4,7 +4,7 @@ using System.Text;
 
 namespace lab_6
 {
-	class Flat
+	struct Flat
 	{
 		private int coin; //цена
 		private int countRoom; //кол-во комнат
