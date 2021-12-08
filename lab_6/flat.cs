@@ -62,9 +62,18 @@ namespace lab_6
 		} // Функция вывода
 
 		/// Функции вывода каждой отдельной переменной
-		public int Get_coin() { return coin; }
-		public int Get_count_room() { return countRoom; }
-		public int Get_num_flat() { return numFlat; }
+		public int Coin {
+			get => coin;
+			set => coin = value;
+		}
+		public int Count_room {
+			get => countRoom;
+			set => countRoom = value;
+		}
+		public int Num_flat {
+			get => numFlat;
+			set => numFlat = value;
+		}
 	}
 
 }

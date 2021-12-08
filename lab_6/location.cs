@@ -93,10 +93,25 @@ namespace lab_6
 			Console.WriteLine("  Номер дома: {0}\n", numHouse);
 		} //Вывод
 		/// Вывод каждой отдельной переменной
-		public int Get_distance_school() { return distanceSchool; }
-		public int Get_distance_hospital() { return distanceHospital; }
-		public int Get_distance_kindergarten() { return distanceKindergarten; }
-		public int Get_num_house() { return numHouse; }
-		public string Get_house_street() { return houseStreet; }
+		public int Distance_school {
+			get => distanceSchool;
+			set => distanceSchool = value;
+		}
+		public int Distance_hospital {
+			get => distanceHospital;
+			set => distanceHospital = value;
+		}
+		public int Distance_kindergarten {
+			get => distanceKindergarten;
+			set => distanceKindergarten = value;
+		}
+		public int Num_house {
+			get => numHouse;
+			set => numHouse = value;
+		}
+		public string House_street {
+			get => houseStreet;
+			set => houseStreet = value;
+		}
 	}
 }

@@ -51,14 +51,14 @@ namespace lab_6
         } // Функция ввода через внешнюю функцию
         public void Print() 
         {
-            Console.Write("\n  Адрес: {0}, дом {1}\n", location.Get_house_street(), location.Get_num_house());
-            Console.Write("  Номер квартиры: {0}\n", flat.Get_num_flat());
-            Console.Write("  Расстояние до школы: {0} км\n", location.Get_distance_school());
-            Console.Write("  Расстояние до больницы: {0} км\n", location.Get_distance_hospital());
-            Console.Write("  Расстояние до детского сада: {0} км\n", location.Get_distance_kindergarten());
-            Console.Write("  Кол-во комнат: {0}\n", flat.Get_count_room());
-            Console.Write("  Цена: {0} рублей\n", flat.Get_coin());
-            Console.Write("  Информация о улице: {0}\n\n", street.Get_street_description());
+            Console.Write("\n  Адрес: {0}, дом {1}\n", location.House_street, location.Num_house);
+            Console.Write("  Номер квартиры: {0}\n", flat.Num_flat);
+            Console.Write("  Расстояние до школы: {0} км\n", location.Distance_school);
+            Console.Write("  Расстояние до больницы: {0} км\n", location.Distance_hospital);
+            Console.Write("  Расстояние до детского сада: {0} км\n", location.Distance_kindergarten);
+            Console.Write("  Кол-во комнат: {0}\n", flat.Count_room);
+            Console.Write("  Цена: {0} рублей\n", flat.Coin);
+            Console.Write("  Информация о улице: {0}\n\n", street.Street_description);
         }  // Функция вывода
     }
 }

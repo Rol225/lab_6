@@ -42,7 +42,14 @@ namespace lab_6
 		} // Функция вывода
 
 		/// Функции вывода каждой отдельной переменной
-		public string Get_street_name() { return streetName; }
-		public string Get_street_description() { return streetDescription; }
+		public string Street_name
+		{
+			get => streetName;
+			set => streetName = value;
+		}
+		public string Street_description {
+			get => streetDescription;
+			set => streetDescription = value;
+		}
 	}
 }
