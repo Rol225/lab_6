@@ -9,12 +9,13 @@ namespace lab_6
         private Flat flat = new Flat();// Квартира
         private Location location = new Location();//Расположение дома
         private Street street = new Street(); //Описание улицы
-
+        private static int countData = 0; // Кол-во домов в базе
         public void Set(int distanceSchool, int distanceHospital, int distanceKindergarten, string houseStreet, int numHouse, int coin, int countRoom, int numFlat, string streetDescription) 
         {
             this.location.Set(distanceSchool, distanceHospital, distanceKindergarten, houseStreet, numHouse);
             this.flat.Set(coin, countRoom, numFlat);
             this.street.Set(houseStreet, streetDescription);
+            CountData();
         } // Функция ввода через встроенную функцию
         public void Set_console()
         {
@@ -24,30 +25,31 @@ namespace lab_6
             Console.Write("\nВыберите расстояние до школы: ");
             while (!int.TryParse(Console.ReadLine(), out distanceSchool)) { Console.WriteLine("Ошибка. Введите число: "); }
 
-            Console.Write("\nВыберите расстояние до больницы: ");
+            Console.Write("Выберите расстояние до больницы: ");
             while (!int.TryParse(Console.ReadLine(), out distanceHospital)) { Console.WriteLine("Ошибка. Введите число: "); }
 
-            Console.Write("\nВыберите расстояние до детского сада: ");
+            Console.Write("Выберите расстояние до детского сада: ");
             while (!int.TryParse(Console.ReadLine(), out distanceKindergarten)) { Console.WriteLine("Ошибка. Введите число: "); }
 
-            Console.Write("\nВыберите стоимость квартиры: ");
+            Console.Write("Выберите стоимость квартиры: ");
             while (!int.TryParse(Console.ReadLine(), out coin)) { Console.WriteLine("Ошибка. Введите число: "); }
 
-            Console.Write("\nВыберите кол-во комнат: ");
+            Console.Write("Выберите кол-во комнат: ");
             while (!int.TryParse(Console.ReadLine(), out countRoom)) { Console.WriteLine("Ошибка. Введите число: "); }
 
-            Console.Write("\nНомер дома: ");
+            Console.Write("Номер дома: ");
             while (!int.TryParse(Console.ReadLine(), out numHouse)) { Console.WriteLine("Ошибка. Введите число: "); }
 
-            Console.Write("\nНомер квартиры: ");
+            Console.Write("Номер квартиры: ");
             while (!int.TryParse(Console.ReadLine(), out numFlat)) { Console.WriteLine("Ошибка. Введите число: "); }
 
-            Console.Write("\n\nУлица: "); houseStreet = Console.ReadLine();
-            Console.Write("\nОписание улици: "); streetDescription = Console.ReadLine();
+            Console.Write("\nУлица: "); houseStreet = Console.ReadLine();
+            Console.Write("Описание улици: "); streetDescription = Console.ReadLine();
 
             location.Set(distanceSchool, distanceHospital, distanceKindergarten, houseStreet, numHouse);
             flat.Set(coin, countRoom, numFlat);
             street.Set(houseStreet, streetDescription);
+            CountData();
         } // Функция ввода через внешнюю функцию
         public void Print() 
         {
@@ -68,5 +70,12 @@ namespace lab_6
             Console.Write("  Цена: {0} рублей\n", flat.Coin);
             Console.Write("  Информация о улице: {0}\n\n", street.Street_description);
         }  // Функция вывода
+        public static int CountData()
+        {
+            countData++;
+            Console.Write("\n  Кол-во домов использованных в базе: {0}\n", countData);
+            return countData;
+        } // Функия счётчик
     }
+    
 }
