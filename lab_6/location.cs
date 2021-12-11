@@ -12,7 +12,7 @@ namespace lab_6
 		private string houseStreet; //адрес дома
 		private int numHouse;
 
-		Location()
+		public Location()
 		{
 			this.distanceHospital = 0;
 			this.distanceKindergarten = 0;
@@ -20,7 +20,7 @@ namespace lab_6
 			this.houseStreet = "";
 			this.numHouse = 0;
 		}
-		Location(int numHouse_new)
+		public Location(int numHouse_new)
 		{
 			this.distanceHospital = 0;
 			this.distanceKindergarten = 0;
@@ -35,7 +35,7 @@ namespace lab_6
 				this.numHouse = numHouse_new;
 			}
 		}
-		Location(int distanceSchool_new, int distanceHospital_new, int distanceKindergarten_new, string houseStreet_new, int numHouse_new)
+		public Location(int distanceSchool_new, int distanceHospital_new, int distanceKindergarten_new, string houseStreet_new, int numHouse_new)
 		{
 			if (distanceSchool_new <= 0)
 			{

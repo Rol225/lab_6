@@ -11,14 +11,14 @@ namespace lab_6
         private Street street = new Street(); //Описание улицы
         private static int countData = 0; // Кол-во домов в базе
 
-        House()
+        public House()
         {
             this.flat = new Flat();
             this.location = new Location();
             this.street = new Street();
             CountData();
         }
-        House(int distanceSchool, int distanceHospital, int distanceKindergarten, string houseStreet, int numHouse, int coin, int countRoom, int numFlat, string streetDescription)
+        public House(int distanceSchool, int distanceHospital, int distanceKindergarten, string houseStreet, int numHouse, int coin, int countRoom, int numFlat, string streetDescription)
         {
             this.location.Set(distanceSchool, distanceHospital, distanceKindergarten, houseStreet, numHouse);
             this.flat.Set(coin, countRoom, numFlat);
@@ -26,7 +26,7 @@ namespace lab_6
             CountData();
         }
 
-        House(Street street_new)
+        public House(Street street_new)
         {
             this.flat = new Flat();
             this.location = new Location();

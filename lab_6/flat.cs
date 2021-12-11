@@ -10,13 +10,13 @@ namespace lab_6
 		private int countRoom; //кол-во комнат
 		private int numFlat; //Номер квартиры
 
-		Flat()
+		public Flat()
 		{
 			this.coin = 0;
 			this.countRoom = 0;
 			this.numFlat = 0;
 		}
-		Flat(int numFlat_2)
+		public Flat(int numFlat_2)
 		{
 			this.coin = 0;
 			this.countRoom = 0;
@@ -29,7 +29,7 @@ namespace lab_6
 				this.numFlat = numFlat_2;
 			}
 		}
-		Flat(int coin_2, int countRoom_2, int numFlat_2)
+		public Flat(int coin_2, int countRoom_2, int numFlat_2)
 {
 	if (coin_2 <= 0) {
 		this.coin = 0;

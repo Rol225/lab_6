@@ -9,12 +9,12 @@ namespace lab_6
 		private string streetName;
 		private string streetDescription;
 
-		Street()
+		public Street()
 		{
 			this.streetName = "";
 			this.streetDescription = "";
 		}
-		Street(string streetName_2)
+		public Street(string streetName_2)
 		{
 			this.streetDescription = "";
 			if (streetName_2[0] != '\0')
@@ -26,7 +26,7 @@ namespace lab_6
 				this.streetName = "Error";
 			}
 		}
-		Street(string streetName_new, string streetDescription_new)
+		public Street(string streetName_new, string streetDescription_new)
 		{
 			if (streetName_new[0] != '\0')
 			{
