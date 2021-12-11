@@ -12,6 +12,72 @@ namespace lab_6
 		private string houseStreet; //адрес дома
 		private int numHouse;
 
+		Location()
+		{
+			this.distanceHospital = 0;
+			this.distanceKindergarten = 0;
+			this.distanceSchool = 0;
+			this.houseStreet = "";
+			this.numHouse = 0;
+		}
+		Location(int numHouse_new)
+		{
+			this.distanceHospital = 0;
+			this.distanceKindergarten = 0;
+			this.distanceSchool = 0;
+			this.houseStreet = "";
+			if (numHouse_new <= 0)
+			{
+				this.numHouse = 0;
+			}
+			else
+			{
+				this.numHouse = numHouse_new;
+			}
+		}
+		Location(int distanceSchool_new, int distanceHospital_new, int distanceKindergarten_new, string houseStreet_new, int numHouse_new)
+		{
+			if (distanceSchool_new <= 0)
+			{
+				this.distanceSchool = 0;
+			}
+			else
+			{
+				this.distanceSchool = distanceSchool_new;
+			}
+			if (distanceHospital_new <= 0)
+			{
+				this.distanceHospital = 0;
+			}
+			else
+			{
+				this.distanceHospital = distanceHospital_new;
+			}
+			if (distanceKindergarten_new <= 0)
+			{
+				this.distanceKindergarten = 0;
+			}
+			else
+			{
+				this.distanceKindergarten = distanceKindergarten_new;
+			}
+			if (numHouse_new <= 0)
+			{
+				this.numHouse = 0;
+			}
+			else
+			{
+				this.numHouse = numHouse_new;
+			}
+			if (houseStreet_new[0] != '\0')
+			{
+				this.houseStreet = houseStreet_new;
+			}
+			else
+			{
+				this.houseStreet = "Error";
+			}
+		}
 		public void Set(int distanceSchool_2, int distanceHospital_2, int distanceKindergarten_2, string houseStreet_2, int numHouse_2)
 		{
 			if (distanceSchool_2 <= 0)

@@ -9,6 +9,42 @@ namespace lab_6
 		private string streetName;
 		private string streetDescription;
 
+		Street()
+		{
+			this.streetName = "";
+			this.streetDescription = "";
+		}
+		Street(string streetName_2)
+		{
+			this.streetDescription = "";
+			if (streetName_2[0] != '\0')
+			{
+				this.streetName = streetName_2;
+			}
+			else
+			{
+				this.streetName = "Error";
+			}
+		}
+		Street(string streetName_new, string streetDescription_new)
+		{
+			if (streetName_new[0] != '\0')
+			{
+				this.streetName = streetName_new;
+			}
+			else
+			{
+				this.streetName = "Error";
+			}
+			if (streetName_new[0] != '\0')
+			{
+				this.streetDescription = streetDescription_new;
+			}
+			else
+			{
+				this.streetDescription = "Error";
+			}
+		}
 		public void Set(string streetName_2, string streetDescription_2)
 		{
 			if (streetName_2 != null)
