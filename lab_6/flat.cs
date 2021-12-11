@@ -10,46 +10,6 @@ namespace lab_6
 		private int countRoom; //кол-во комнат
 		private int numFlat; //Номер квартиры
 
-		Flat()
-		{
-			this.coin = 0;
-			this.countRoom = 0;
-			this.numFlat = 0;
-		}
-		Flat(int numFlat_2)
-		{
-			this.coin = 0;
-			this.countRoom = 0;
-			if (numFlat_2 <= 0)
-			{
-				this.numFlat = 0;
-			}
-			else
-			{
-				this.numFlat = numFlat_2;
-			}
-		}
-		Flat(int coin_2, int countRoom_2, int numFlat_2)
-{
-	if (coin_2 <= 0) {
-		this.coin = 0;
-	}
-	else {
-		this.coin = coin_2;
-	}
-	if (countRoom_2 <= 0) {
-		this.countRoom = 0;
-	}
-	else {
-		this.countRoom = countRoom_2;
-	}
-	if (numFlat_2 <= 0) {
-		this.numFlat = 0;
-	}
-	else {
-		this.numFlat = numFlat_2;
-	}
-}
 		public void Set(int coin_2, int countRoom_2, int numFlat_2) {
 			if (coin_2 <= 0)
 			{

@@ -10,30 +10,6 @@ namespace lab_6
         private Location location = new Location();//Расположение дома
         private Street street = new Street(); //Описание улицы
         private static int countData = 0; // Кол-во домов в базе
-
-        House()
-        {
-            this.flat = new Flat();
-            this.location = new Location();
-            this.street = new Street();
-            CountData();
-        }
-        House(int distanceSchool, int distanceHospital, int distanceKindergarten, string houseStreet, int numHouse, int coin, int countRoom, int numFlat, string streetDescription)
-        {
-            this.location.Set(distanceSchool, distanceHospital, distanceKindergarten, houseStreet, numHouse);
-            this.flat.Set(coin, countRoom, numFlat);
-            this.street.Set(houseStreet, streetDescription);
-            CountData();
-        }
-
-        House(Street street_new)
-        {
-            this.flat = new Flat();
-            this.location = new Location();
-            this.street = street_new;
-            CountData();
-        }
-
         public void Set(int distanceSchool, int distanceHospital, int distanceKindergarten, string houseStreet, int numHouse, int coin, int countRoom, int numFlat, string streetDescription) 
         {
             this.location.Set(distanceSchool, distanceHospital, distanceKindergarten, houseStreet, numHouse);
