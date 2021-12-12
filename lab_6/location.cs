@@ -26,99 +26,198 @@ namespace lab_6
 			this.distanceKindergarten = 0;
 			this.distanceSchool = 0;
 			this.houseStreet = "";
-			if (numHouse_new <= 0)
-			{
-				this.numHouse = 0;
+            try
+            {
+				if (numHouse_new <= 0)
+				{
+					this.numHouse = 0;
+					throw new Exception("Ошибка присваивания значения переменной обьекта!");
+				}
+				else
+				{
+					this.numHouse = numHouse_new;
+				}
 			}
-			else
+			catch (Exception ex)
 			{
-				this.numHouse = numHouse_new;
+				Console.WriteLine("Ошибка!");
+				Console.WriteLine(ex);
 			}
 		}
 		public Location(int distanceSchool_new, int distanceHospital_new, int distanceKindergarten_new, string houseStreet_new, int numHouse_new)
 		{
-			if (distanceSchool_new <= 0)
-			{
-				this.distanceSchool = 0;
+            try
+            {
+				if (distanceSchool_new <= 0)
+				{
+					this.distanceSchool = 0;
+					throw new Exception("Ошибка присваивания значения переменной обьекта!");
+				}
+				else
+				{
+					this.distanceSchool = distanceSchool_new;
+				}
 			}
-			else
+			catch (Exception ex)
 			{
-				this.distanceSchool = distanceSchool_new;
+				Console.WriteLine("Ошибка!");
+				Console.WriteLine(ex);
 			}
-			if (distanceHospital_new <= 0)
+			try
 			{
-				this.distanceHospital = 0;
+				if (distanceHospital_new <= 0)
+				{
+					this.distanceHospital = 0;
+					throw new Exception("Ошибка присваивания значения переменной обьекта!");
+				}
+				else
+				{
+					this.distanceHospital = distanceHospital_new;
+				}
 			}
-			else
+			catch (Exception ex)
 			{
-				this.distanceHospital = distanceHospital_new;
+				Console.WriteLine("Ошибка!");
+				Console.WriteLine(ex);
 			}
-			if (distanceKindergarten_new <= 0)
+			try
 			{
-				this.distanceKindergarten = 0;
+				if (distanceKindergarten_new <= 0)
+				{
+					this.distanceKindergarten = 0;
+					throw new Exception("Ошибка присваивания значения переменной обьекта!");
+				}
+				else
+				{
+					this.distanceKindergarten = distanceKindergarten_new;
+				}
 			}
-			else
+			catch (Exception ex)
 			{
-				this.distanceKindergarten = distanceKindergarten_new;
+				Console.WriteLine("Ошибка!");
+				Console.WriteLine(ex);
 			}
-			if (numHouse_new <= 0)
+			try
 			{
-				this.numHouse = 0;
+				if (numHouse_new <= 0)
+				{
+					this.numHouse = 0;
+					throw new Exception("Ошибка присваивания значения переменной обьекта!");
+				}
+				else
+				{
+					this.numHouse = numHouse_new;
+				}
 			}
-			else
+			catch (Exception ex)
 			{
-				this.numHouse = numHouse_new;
+				Console.WriteLine("Ошибка!");
+				Console.WriteLine(ex);
 			}
-			if (houseStreet_new[0] != '\0')
+			try
 			{
-				this.houseStreet = houseStreet_new;
+				if (houseStreet_new[0] != '\0')
+				{
+					this.houseStreet = houseStreet_new;
+				}
+				else
+				{
+					this.houseStreet = "Error";
+					throw new Exception("Ошибка присваивания значения переменной обьекта!");
+				}
 			}
-			else
+			catch (Exception ex)
 			{
-				this.houseStreet = "Error";
+				Console.WriteLine("Ошибка!");
+				Console.WriteLine(ex);
 			}
 		}
 		public void Set(int distanceSchool_2, int distanceHospital_2, int distanceKindergarten_2, string houseStreet_2, int numHouse_2)
 		{
-			if (distanceSchool_2 <= 0)
+			try
 			{
-				this.distanceSchool = 0;
+				if (distanceSchool_2 <= 0)
+				{
+					this.distanceSchool = 0;
+					throw new Exception("Ошибка присваивания значения переменной обьекта!");
+				}
+				else
+				{
+					this.distanceSchool = distanceSchool_2;
+				}
 			}
-			else
+			catch (Exception ex)
 			{
-				this.distanceSchool = distanceSchool_2;
+				Console.WriteLine("Ошибка!");
+				Console.WriteLine(ex);
 			}
-			if (distanceHospital_2 <= 0)
+			try
 			{
-				this.distanceHospital = 0;
+				if (distanceHospital_2 <= 0)
+				{
+					this.distanceHospital = 0;
+					throw new Exception("Ошибка присваивания значения переменной обьекта!");
+				}
+				else
+				{
+					this.distanceHospital = distanceHospital_2;
+				}
 			}
-			else
+			catch (Exception ex)
 			{
-				this.distanceHospital = distanceHospital_2;
+				Console.WriteLine("Ошибка!");
+				Console.WriteLine(ex);
 			}
-			if (distanceKindergarten_2 <= 0)
+			try
 			{
-				this.distanceKindergarten = 0;
+				if (distanceKindergarten_2 <= 0)
+				{
+					this.distanceKindergarten = 0;
+					throw new Exception("Ошибка присваивания значения переменной обьекта!");
+				}
+				else
+				{
+					this.distanceKindergarten = distanceKindergarten_2;
+				}
 			}
-			else
+			catch (Exception ex)
 			{
-				this.distanceKindergarten = distanceKindergarten_2;
+				Console.WriteLine("Ошибка!");
+				Console.WriteLine(ex);
 			}
-			if (numHouse_2 <= 0)
+			try
 			{
-				this.numHouse = 0;
+				if (numHouse_2 <= 0)
+				{
+					this.numHouse = 0;
+					throw new Exception("Ошибка присваивания значения переменной обьекта!");
+				}
+				else
+				{
+					this.numHouse = numHouse_2;
+				}
 			}
-			else
+			catch (Exception ex)
 			{
-				this.numHouse = numHouse_2;
+				Console.WriteLine("Ошибка!");
+				Console.WriteLine(ex);
 			}
-			if (houseStreet_2 != null)
+			try
 			{
-				this.houseStreet = houseStreet_2;
+				if (houseStreet_2 != null)
+				{
+					this.houseStreet = houseStreet_2;
+				}
+				else
+				{
+					this.houseStreet = "Error";
+					throw new Exception("Ошибка присваивания значения переменной обьекта!");
+				}
 			}
-			else
+			catch (Exception ex)
 			{
-				this.houseStreet = "Error";
+				Console.WriteLine("Ошибка!");
+				Console.WriteLine(ex);
 			}
 		}//Функция ввода через внешнюю функцию
 		public void Set_console()

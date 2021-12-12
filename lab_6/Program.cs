@@ -190,6 +190,9 @@ namespace lab_6
 				string streetDescription, houseStreet;
 
 				House house_1 = new House();
+				Street street_1 = new Street();
+				Location location_1 = new Location();
+				Flat flat_1 = new Flat();
 
 				int option = 0;
 				do
@@ -236,7 +239,10 @@ namespace lab_6
 						Console.WriteLine("\nУлица: "); houseStreet = Console.ReadLine();
 						Console.WriteLine("Описание улици: "); streetDescription = Console.ReadLine();
 
-						house_1.Set(distanceSchool, distanceHospital, distanceKindergarten, houseStreet, numHouse, coin, countRoom, numFlat, streetDescription);
+						location_1.Set(distanceSchool, distanceHospital, distanceKindergarten, houseStreet, numHouse);
+						flat_1.Set(coin, countRoom, numFlat);
+						street_1.Set(houseStreet, streetDescription);
+						house_1.Set(street_1, flat_1, location_1);
 					}
 					else if (option == 3)
 					{

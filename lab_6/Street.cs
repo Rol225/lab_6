@@ -17,52 +17,101 @@ namespace lab_6
 		public Street(string streetName_2)
 		{
 			this.streetDescription = "";
-			if (streetName_2[0] != '\0')
+			try
 			{
-				this.streetName = streetName_2;
+				if (streetName_2[0] != '\0')
+				{
+					this.streetName = streetName_2;
+				}
+				else
+				{
+					this.streetName = "Error";
+					throw new Exception("Ошибка присваивания значения переменной обьекта!");
+				}
 			}
-			else
+			catch (Exception ex)
 			{
-				this.streetName = "Error";
+				Console.WriteLine("Ошибка!");
+				Console.WriteLine(ex);
 			}
 		}
 		public Street(string streetName_new, string streetDescription_new)
 		{
-			if (streetName_new[0] != '\0')
-			{
-				this.streetName = streetName_new;
+            try
+            {
+				if (streetName_new[0] != '\0')
+				{
+					this.streetName = streetName_new;
+				}
+				else
+				{
+					this.streetName = "Error";
+					throw new Exception("Ошибка присваивания значения переменной обьекта!");
+				}
 			}
-			else
+			catch (Exception ex)
 			{
-				this.streetName = "Error";
+				Console.WriteLine("Ошибка!");
+				Console.WriteLine(ex);
 			}
-			if (streetName_new[0] != '\0')
+			try
 			{
-				this.streetDescription = streetDescription_new;
+				if (streetName_new[0] != '\0')
+				{
+					this.streetDescription = streetDescription_new;
+				}
+				else
+				{
+					this.streetDescription = "Error";
+					throw new Exception("Ошибка присваивания значения переменной обьекта!");
+				}
 			}
-			else
+			catch (Exception ex)
 			{
-				this.streetDescription = "Error";
+				Console.WriteLine("Ошибка!");
+				Console.WriteLine(ex);
 			}
+			
+			
 		}
 		public void Set(string streetName_2, string streetDescription_2)
 		{
-			if (streetName_2 != null)
-			{
-				this.streetName = streetName_2;
+            try
+            {
+				if (streetName_2 != null)
+				{
+					this.streetName = streetName_2;
+				}
+				else
+				{
+					this.streetName = "Error";
+					throw new Exception("Ошибка присваивания значения переменной обьекта!");
+				}
 			}
-			else
+			catch (Exception ex)
 			{
-				this.streetName = "Error";
+				Console.WriteLine("Ошибка!");
+				Console.WriteLine(ex);
 			}
-			if (streetName_2 != null)
+			try
 			{
-				this.streetDescription = streetDescription_2;
+				if (streetName_2 != null)
+				{
+					this.streetDescription = streetDescription_2;
+				}
+				else
+				{
+					this.streetDescription = "Error";
+					throw new Exception("Ошибка присваивания значения переменной обьекта!");
+				}
 			}
-			else
+			catch (Exception ex)
 			{
-				this.streetDescription = "Error";
+				Console.WriteLine("Ошибка!");
+				Console.WriteLine(ex);
 			}
+			
+			
 		}// Функция ввода через встроенную функцию
 		public void Set_console() 
 		{

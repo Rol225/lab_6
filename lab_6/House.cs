@@ -13,32 +13,130 @@ namespace lab_6
 
         public House()
         {
-            this.flat = new Flat();
-            this.location = new Location();
-            this.street = new Street();
+            try
+            {
+                this.flat = new Flat();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Ошибка!");
+                Console.WriteLine(ex);
+            }
+            try
+            {
+                this.location = new Location();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Ошибка!");
+                Console.WriteLine(ex);
+            }
+            try
+            {
+                this.street = new Street();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Ошибка!");
+                Console.WriteLine(ex);
+            }
             CountData();
         }
         public House(int distanceSchool, int distanceHospital, int distanceKindergarten, string houseStreet, int numHouse, int coin, int countRoom, int numFlat, string streetDescription)
         {
-            this.location.Set(distanceSchool, distanceHospital, distanceKindergarten, houseStreet, numHouse);
-            this.flat.Set(coin, countRoom, numFlat);
-            this.street.Set(houseStreet, streetDescription);
+            try
+            {
+                this.location.Set(distanceSchool, distanceHospital, distanceKindergarten, houseStreet, numHouse);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Ошибка!");
+                Console.WriteLine(ex);
+            }
+            try
+            {
+                this.flat.Set(coin, countRoom, numFlat);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Ошибка!");
+                Console.WriteLine(ex);
+            }
+            try
+            {
+                this.street.Set(houseStreet, streetDescription);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Ошибка!");
+                Console.WriteLine(ex);
+            }
             CountData();
         }
 
         public House(Street street_new)
         {
-            this.flat = new Flat();
-            this.location = new Location();
-            this.street = street_new;
+            try
+            {
+                this.flat = new Flat();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Ошибка!");
+                Console.WriteLine(ex);
+            }
+            try
+            {
+                this.location = new Location();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Ошибка!");
+                Console.WriteLine(ex);
+            }
+            try
+            {
+                this.street = street_new;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Ошибка!");
+                Console.WriteLine(ex);
+            }
             CountData();
         }
 
-        public void Set(int distanceSchool, int distanceHospital, int distanceKindergarten, string houseStreet, int numHouse, int coin, int countRoom, int numFlat, string streetDescription) 
+        public void Set(Street street_new, Flat flat_new, Location location_new ) 
         {
-            this.location.Set(distanceSchool, distanceHospital, distanceKindergarten, houseStreet, numHouse);
-            this.flat.Set(coin, countRoom, numFlat);
-            this.street.Set(houseStreet, streetDescription);
+            try
+            {
+                this.location = location_new;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Ошибка!");
+                Console.WriteLine(ex);
+            }
+            try
+            {
+                this.flat = flat_new;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Ошибка!");
+                Console.WriteLine(ex);
+            }
+            try
+            {
+                this.street = street_new;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Ошибка!");
+                Console.WriteLine(ex);
+            }
             CountData();
         } // Функция ввода через встроенную функцию
         public void Set_console()
@@ -82,17 +180,26 @@ namespace lab_6
             int distanceKindergarten;
             string houseStreet = "";
             int numHouse = 0;
-            location.OutData(out distanceSchool, out distanceHospital, out distanceKindergarten);
-            location.RefData(ref houseStreet, ref numHouse);
+            try
+            {
+                location.OutData(out distanceSchool, out distanceHospital, out distanceKindergarten);
+                location.RefData(ref houseStreet, ref numHouse);
 
-            Console.Write("\n  Адрес: {0}, дом {1}\n", houseStreet, numHouse);
-            Console.Write("  Номер квартиры: {0}\n", flat.Num_flat);
-            Console.Write("  Расстояние до школы: {0} км\n", distanceSchool);
-            Console.Write("  Расстояние до больницы: {0} км\n", distanceHospital);
-            Console.Write("  Расстояние до детского сада: {0} км\n", distanceKindergarten);
-            Console.Write("  Кол-во комнат: {0}\n", flat.Count_room);
-            Console.Write("  Цена: {0} рублей\n", flat.Coin);
-            Console.Write("  Информация о улице: {0}\n\n", street.Street_description);
+                Console.Write("\n  Адрес: {0}, дом {1}\n", houseStreet, numHouse);
+                Console.Write("  Номер квартиры: {0}\n", flat.Num_flat);
+                Console.Write("  Расстояние до школы: {0} км\n", distanceSchool);
+                Console.Write("  Расстояние до больницы: {0} км\n", distanceHospital);
+                Console.Write("  Расстояние до детского сада: {0} км\n", distanceKindergarten);
+                Console.Write("  Кол-во комнат: {0}\n", flat.Count_room);
+                Console.Write("  Цена: {0} рублей\n", flat.Coin);
+                Console.Write("  Информация о улице: {0}\n\n", street.Street_description);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Ошибка получения данных!");
+                Console.WriteLine(ex);
+            }
+
         }  // Функция вывода
         public static int CountData()
         {

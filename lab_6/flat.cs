@@ -20,60 +20,129 @@ namespace lab_6
 		{
 			this.coin = 0;
 			this.countRoom = 0;
-			if (numFlat_2 <= 0)
+			try
 			{
-				this.numFlat = 0;
+				if (numFlat_2 <= 0)
+				{
+					this.numFlat = 0;
+					throw new Exception("Ошибка присваивания значения переменной обьекта!");
+				}
+				else
+				{
+					this.numFlat = numFlat_2;
+				}
 			}
-			else
+			catch (Exception ex)
 			{
-				this.numFlat = numFlat_2;
+				Console.WriteLine("Ошибка!");
+				Console.WriteLine(ex);
+			}
+			}
+		public Flat(int coin_2, int countRoom_2, int numFlat_2)
+		{
+            try
+            {
+				if (coin_2 <= 0)
+				{
+					this.coin = 0;
+					throw new Exception("Ошибка присваивания значения переменной обьекта!");
+				}
+				else
+				{
+					this.coin = coin_2;
+				}
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine("Ошибка!");
+				Console.WriteLine(ex);
+			}
+			try
+            {
+				if (countRoom_2 <= 0)
+				{
+					this.countRoom = 0;
+					throw new Exception("Ошибка присваивания значения переменной обьекта!");
+				}
+				else
+				{
+					this.countRoom = countRoom_2;
+				}
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine("Ошибка!");
+				Console.WriteLine(ex);
+			}
+            try
+            {
+				if (numFlat_2 <= 0)
+				{
+					this.numFlat = 0;
+					throw new Exception("Ошибка присваивания значения переменной обьекта!");
+				}
+				else
+				{
+					this.numFlat = numFlat_2;
+				}
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine("Ошибка!");
+				Console.WriteLine(ex);
 			}
 		}
-		public Flat(int coin_2, int countRoom_2, int numFlat_2)
-{
-	if (coin_2 <= 0) {
-		this.coin = 0;
-	}
-	else {
-		this.coin = coin_2;
-	}
-	if (countRoom_2 <= 0) {
-		this.countRoom = 0;
-	}
-	else {
-		this.countRoom = countRoom_2;
-	}
-	if (numFlat_2 <= 0) {
-		this.numFlat = 0;
-	}
-	else {
-		this.numFlat = numFlat_2;
-	}
-}
 		public void Set(int coin_2, int countRoom_2, int numFlat_2) {
-			if (coin_2 <= 0)
+			try
 			{
-				this.coin = 0;
+				if (coin_2 <= 0)
+				{
+					this.coin = 0;
+					throw new Exception("Ошибка присваивания значения переменной обьекта!");
+				}
+				else
+				{
+					this.coin = coin_2;
+				}
 			}
-			else
+			catch (Exception ex)
 			{
-				this.coin = coin_2;
+				Console.WriteLine("Ошибка!");
+				Console.WriteLine(ex);
 			}
-			if (countRoom_2 <= 0)
+			try
 			{
-				this.countRoom = 0;
+				if (countRoom_2 <= 0)
+				{
+					this.countRoom = 0;
+					throw new Exception("Ошибка присваивания значения переменной обьекта!");
+				}
+				else
+				{
+					this.countRoom = countRoom_2;
+				}
 			}
-			else
+			catch (Exception ex)
 			{
-				this.countRoom = countRoom_2;
+				Console.WriteLine("Ошибка!");
+				Console.WriteLine(ex);
 			}
-			if (numFlat_2 <= 0)
+			try
 			{
-				this.numFlat = 0;
+				if (numFlat_2 <= 0)
+				{
+					this.numFlat = 0;
+					throw new Exception("Ошибка присваивания значения переменной обьекта!");
+				}
+				else
+				{
+					this.numFlat = numFlat_2;
+				}
 			}
-			else
+			catch (Exception ex)
 			{
-				this.numFlat = numFlat_2;
+				Console.WriteLine("Ошибка!");
+				Console.WriteLine(ex);
 			}
 		} // Функция ввода через внешнюю функцию
 		public void Set_console() {
