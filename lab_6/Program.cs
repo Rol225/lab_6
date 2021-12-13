@@ -11,16 +11,16 @@ namespace lab_6
 
 			do
 			{
-				 Console.WriteLine("  1) Класс location\n  2) Класс flat\n  3) Класс street\n  4) Класс house\n  5) Массив обьектов класса house\n  6) Выход\n");
+				 Console.WriteLine("  1) Класс location\n  2) Класс flat\n  3) Класс street\n  4) Класс house\n  5) Массив обьектов класса house\n  6) 2-x мерный массив объектов flat\n  7) Выход\n");
 				 Console.WriteLine("Выберите действие: ");
 				do
 				{
 					while (!int.TryParse(Console.ReadLine(), out option)) { Console.WriteLine("Ошибка. Введите число: "); }
-					if (option > 5 || option <=0)
+					if (option > 7 || option <=0)
 					{
 						Console.WriteLine("\nОшибка. выбирете из допустимых значений: ");
 					}
-				} while (option > 5 || option <= 0);
+				} while (option > 7 || option <= 0);
 				
 				if (option == 1)
 				{
@@ -42,7 +42,11 @@ namespace lab_6
 				{
 					FunckForHouses();
 				}
-			} while (option != 6);
+				else if (option == 6)
+				{
+					TwodimensionalArrayFlats();
+				}
+			} while (option != 7);
 
 			void FunckForLocation()
 			{
@@ -271,6 +275,45 @@ namespace lab_6
 					Console.WriteLine();
 				}
 				Console.WriteLine();
+			}
+			void TwodimensionalArrayFlats()
+			{
+				int size, size_2;
+
+				Console.Write("\n\n  Введите размерность основного массива: ");
+				while (!int.TryParse(Console.ReadLine(), out size)) { Console.WriteLine("Ошибка. Введите число: "); }
+				Console.Write("\n  Введите размерность дочерних массивов: ");
+				while (!int.TryParse(Console.ReadLine(), out size_2)) { Console.WriteLine("Ошибка. Введите число: "); }
+
+				Flat[][] Flats = new Flat[size][];
+				for (int i = 0; i < size; i++)
+				{
+					for (int j = 0; j < size_2; j++)
+					{
+						Flats[i] = new Flat[size_2];
+					}
+				}
+				Console.Write("\n\n  Введите значения: ");
+				for (int i = 0; i < size; i++)
+				{
+					Console.Write("\n");
+					for (int j = 0; j < size_2; j++)
+					{
+						Flats[i][j] = new Flat();
+						Flats[i][j].Set_console();
+					}
+				}
+
+				Console.Write("\n\n  Ваши данные: ");
+				for (int i = 0; i < size; i++)
+				{
+					Console.Write("\n");
+					for (int j = 0; j < size_2; j++)
+					{
+						Flats[i][j].Print();
+					}
+				}
+				Console.Write("\n");
 			}
 		}	
 	}

@@ -146,19 +146,19 @@ namespace lab_6
 			}
 		} // Функция ввода через внешнюю функцию
 		public void Set_console() {
-			Console.WriteLine("\nВыберите стоимость квартиры: ");
+			Console.Write("\nВыберите стоимость квартиры: ");
 			do
 			{
 				while (!int.TryParse(Console.ReadLine(), out coin)) { Console.WriteLine("Ошибка. Введите число: "); }
 			} while (coin <= 0);
 
-			Console.WriteLine("Выберите кол-во комнат: ");
+			Console.Write("Выберите кол-во комнат: ");
 			do
 			{
 				while (!int.TryParse(Console.ReadLine(), out countRoom)) { Console.WriteLine("Ошибка. Введите число: "); }
 			} while (countRoom <= 0);
 
-			Console.WriteLine("Номер квартиры: ");
+			Console.Write("Номер квартиры: ");
 			do
 			{
 				while (!int.TryParse(Console.ReadLine(), out numFlat)) { Console.WriteLine("Ошибка. Введите число: "); }
